@@ -7,68 +7,120 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #f9faf9;
-      color: #424242;
+      background: #f0f9f9;
+      color: #2c3e50;
       margin: 0;
       padding: 0;
     }
     header {
-      background: #00796b;
-      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background: #009688;
       padding: 30px;
-      text-align: center;
+      color: white;
+    }
+    header img {
+      height: 90px;
+      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
     }
     h1 {
       margin: 0;
-      font-size: 2.8em;
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+    p.subtitle {
+      margin: 5px 0 0;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
     section {
-      padding: 25px 20px;
-      max-width: 800px;
-      margin: auto;
+      margin-bottom: 40px;
     }
     h2 {
-      color: #ff6600;
-      margin-top: 30px;
+      color: #ff6f00;
+      border-bottom: 3px solid #ff6f00;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
     ul, ol {
       margin-left: 20px;
+      line-height: 1.6;
     }
     .boton {
-      background: #009688;
+      background: #ff6f00;
       color: white;
-      padding: 14px 24px;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 700;
       text-decoration: none;
-      border-radius: 8px;
+      margin-right: 15px;
       display: inline-block;
-      margin: 15px 10px 0 0;
-      font-weight: 600;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease;
     }
     .boton:hover {
-      background: #00796b;
+      background: #e65c00;
     }
     footer {
-      background: #00796b;
+      background: #009688;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
       font-size: 0.9em;
+      margin-top: 60px;
+    }
+    /* Imagen decorativa en la sección */
+    .img-container {
+      text-align: center;
+      margin: 20px 0 40px;
+    }
+    .img-container img {
+      max-width: 220px;
+      opacity: 0.85;
+      filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      header img {
+        height: 70px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Gray_389_system_nervous_system.svg" alt="Sistema Nervioso" />
+  <div>
     <h1>Vértebra Holística</h1>
-    <p>Cuidado quiropráctico consciente en Puerto Rico</p>
-  </header>
+    <p class="subtitle">Cuidado quiropráctico consciente en Puerto Rico</p>
+  </div>
+</header>
 
+<main>
   <section>
     <h2>Sobre mí</h2>
     <p>Soy Elizabeth, quiropráctica con formación avanzada y enfoque reorganizacional. Mi misión es ayudarte a liberar tensiones profundas y recuperar tu bienestar integral con técnicas efectivas y personalizadas. Aquí encuentras un espacio seguro y profesional para evolucionar hacia tu mejor versión.</p>
+  </section>
 
+  <section class="img-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Gray_543_-_Vertebral_column_-_left_lateral_view_-_dorsal_view.svg/256px-Gray_543_-_Vertebral_column_-_left_lateral_view_-_dorsal_view.svg.png" alt="Columna Vertebral" />
+  </section>
+
+  <section>
     <h2>Servicios</h2>
     <ul>
       <li>Torque Release Technique (TRT)</li>
@@ -77,22 +129,27 @@
       <li>Knee Chest / Toggle Atlas</li>
       <li>Ajustes específicos: pelvis, columna torácica y cuello</li>
     </ul>
+  </section>
 
+  <section>
     <h2>Cómo funciona</h2>
     <ol>
       <li>Completa tu formulario con tu historia clínica online.</li>
       <li>Reviso tu caso y te confirmo si puedo atenderte.</li>
       <li>Agendamos tu cita: puedes venir a mi home office en San Juan o puedo ir a tu casa, según tu preferencia y disponibilidad.</li>
     </ol>
+  </section>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVFl9zUwOa2ScOdk7JxLIcHsKVu1JslPbfPmv9WLfjN88_gA/viewform?usp=sf_link" class="boton" target="_blank" rel="noopener noreferrer">Llenar historia clínica</a>
+  <section>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeh4flz5FVa-Xv_eQO0iTFXQJ8gI5qgYxTiqQvEqxGGdyTa0A/viewform?usp=sf_link" class="boton" target="_blank" rel="noopener noreferrer">Llenar historia clínica</a>
     <a href="https://calendly.com/tu_usuario" class="boton" target="_blank" rel="noopener noreferrer">Reservar cita</a>
     <a href="https://wa.me/17871234567" class="boton" target="_blank" rel="noopener noreferrer">Escríbeme por WhatsApp</a>
   </section>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Vértebra Holística | San Juan, Puerto Rico</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Vértebra Holística | San Juan, Puerto Rico</p>
+</footer>
 
 </body>
 </html>
